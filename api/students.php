@@ -50,7 +50,7 @@ if ($method === 'GET') {
     if (!empty($_GET['cohort_id']))     { $sql .= " AND st.cohort_id = ?";      $params[] = (int)$_GET['cohort_id']; }
     if (!empty($_GET['entry_year_id'])) { $sql .= " AND st.entry_year_id = ?";  $params[] = (int)$_GET['entry_year_id']; }
 
-    $sql .= " ORDER BY st.student_code";
+    $sql .= " ORDER BY st.id DESC";
 
     $stmt = $pdo->prepare($sql);
     $stmt->execute($params);
