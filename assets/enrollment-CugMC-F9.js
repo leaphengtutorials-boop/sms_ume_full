@@ -1,0 +1,1 @@
+import{D as e}from"./index-Bd3d477w.js";const n={list:(t={})=>e.get("/enrollment.php",t),save:t=>e.post("/enrollment.php",t),changeStatus:(t,p,l)=>e.patch("/enrollment.php",{student_id:t,subject_id:p,status:l}),bulkComplete:(t,p)=>e.post("/bulk_complete.php",{subject_id:t,student_ids:p})};export{n as e};
